@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Courses</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">EduCourses</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="landing-page.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="landing-page.html#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary nav-link text-white" href="Login.html"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-secondary nav-link text-white" href="Login.html"
+              >Login</a
+            >
+          </li>
+          <!-- User Profile Picture -->
+          <li class="nav-item d-none" id="user-profile">
+            <a class="nav-link" href="user-profile.html" id="profileLink">
+              <img
+                src=""
+                alt="Profile Icon"
+                class="rounded-circle"
+                width="35"
+                height="35"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <div class="container text-center my-5 pt-5">
+      <h1>Explore Our Courses</h1>
+      <p class="lead">
+        Select a category below to explore courses in that domain.
+      </p>
+    </div>
+
+    <!-- Core Languages Section -->
+    <section class="container my-5 courses" id="Core">
+      <h2 class="mb-4">Core Languages</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 course-card">
+            <img
+              src="https://th.bing.com/th/id/OIP._Lm_T3scKhVEVFC54gcRxwHaE8?w=286&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+              class="card-img-top"
+              alt="Java"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Java</h5>
+              <p class="card-text">
+                Learn the basics of Java, one of the most popular programming
+                languages in the world.
+              </p>
+              <a href="java.html" class="btn btn-primary" target="_blank"
+                >Enroll</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 course-card">
+            <img
+              src="https://logohistory.net/wp-content/uploads/2023/06/Python-Emblem.png"
+              class="card-img-top"
+              alt="Python"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">
+                Master the fundamentals of Python programming, the foundation of
+                modern AI models
+              </p>
+              <a href="python.html" class="btn btn-primary" target="_blank"
+                >Enroll</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 course-card">
+            <img
+              src="https://clipart-library.com/image_gallery2/C-PNG-Clipart.png"
+              class="card-img-top"
+              alt="C++"
+            />
+            <div class="card-body">
+              <h5 class="card-title">C++</h5>
+              <p class="card-text">
+                Understand object-oriented programming and build efficient
+                applications with C++.
+              </p>
+              <a href="#" class="btn btn-primary">Enroll</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Web Development Section -->
+    <section class="container my-5 courses" id="Web">
+      <h2 class="mb-4">Web Development</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 course-card">
+            <img
+              src="https://th.bing.com/th/id/R.e1d424c4b9be7009dd57ef4e7d58e343?rik=EZ8NO5x85jZ0Vg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-NGHwBncyA68%2fUiMm_8b2ZUI%2fAAAAAAAAAnA%2f17OGXCKI4zE%2fs1600%2fLogo%2bHTML5.JPG&ehk=rnVe3RUksYQ4LMnsZ6Xxyf3F5lkj3Br1Eu6vOVCkYh0%3d&risl=&pid=ImgRaw&r=0"
+              class="card-img-top"
+              alt="HTML"
+            />
+            <div class="card-body">
+              <h5 class="card-title">HTML</h5>
+              <p class="card-text">
+                Learn the structure of the web with HyperText Markup Language
+                (HTML).
+              </p>
+              <a href="#" class="btn btn-primary">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 course-card">
+            <img
+              src="https://fullstack-dev.netlify.app/Showcase-image/css3.jpg"
+              class="card-img-top"
+              alt="CSS"
+            />
+            <div class="card-body">
+              <h5 class="card-title">CSS</h5>
+              <p class="card-text">
+                Style your web pages and create stunning visuals using Cascading
+                Style Sheets (CSS).
+              </p>
+              <a href="#" class="btn btn-primary">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 course-card">
+            <img
+              src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png"
+              class="card-img-top"
+              alt="JavaScript"
+            />
+            <div class="card-body">
+              <h5 class="card-title">JavaScript</h5>
+              <p class="card-text">
+                Bring your websites to life with JavaScript, the language of the
+                web.
+              </p>
+              <a href="#" class="btn btn-primary">Enroll</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frameworks Section -->
+    <section class="container my-5 courses" id="FrameWorks">
+      <h2 class="mb-4">Frameworks</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 course-card">
+            <img
+              src="https://th.bing.com/th/id/OIP.9c0Aadk9V1TemVqw7fByyQHaEK?rs=1&pid=ImgDetMain"
+              class="card-img-top"
+              alt="React"
+            />
+            <div class="card-body">
+              <h5 class="card-title">React</h5>
+              <p class="card-text">
+                Build interactive user interfaces with React, a popular
+                JavaScript library.
+              </p>
+              <a href="#" class="btn btn-primary">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 course-card">
+            <img
+              src="https://logowik.com/content/uploads/images/angular6660.logowik.com.webp"
+              class="card-img-top"
+              alt="Angular"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Angular</h5>
+              <p class="card-text">
+                Develop powerful web apps with Angular, a framework maintained
+                by Google.
+              </p>
+              <a href="#" class="btn btn-primary">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 course-card">
+            <img
+              src="https://dwglogo.com/wp-content/uploads/2017/09/Vue-logo-001.svg"
+              class="card-img-top"
+              alt="Vue.js"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Vue.js</h5>
+              <p class="card-text">
+                Learn Vue.js to create dynamic web applications with an easy
+                learning curve.
+              </p>
+              <a href="#" class="btn btn-primary">Enroll</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-light bg-dark py-4">
+      <p>
+        &copy; 2024 EduCourses. All rights reserved. |
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+<script src="DomUpdater.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("/isLogedIn")
+      .then((response) => response.json())
+      .then((user) => {
+        const enrollButtons = document.querySelectorAll(".btn.btn-primary");
+        enrollButtons.forEach((button) => {
+          button.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent the default action
+
+            if (!user) {
+              window.location.href = "Login.html";
+            } else {
+              window.location.href = button.getAttribute("href");
+            }
+          });
+        });
+      })
+      .catch((error) => {
+        console.error("Error fetching user login status:", error);
+      });
+  });
+</script>

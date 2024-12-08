@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Priyanshu Malusare",
+    "username": "admin",
+    "password": "admin",
+    "isLogedIn": false,
+    "Email": "",
+    "PFP": "https://th.bing.com/th?id=OIP.xE6snuNzedFidy0T-ViTIAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+    "PhoneNumber": "+91 Priyanshu",
+    "Enrolled_courses": []
+  },
+  {
+    "id": 2,
+    "name": "Mitali Salunke",
+    "username": "itsmits",
+    "password": "Mitali123",
+    "isLogedIn": true,
+    "Email": "",
+    "PFP": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/10/Scooby-Main.jpg",
+    "PhoneNumber": "+91 Mitali",
+    "Enrolled_courses": []
+  },
+  {
+    "id": 3,
+    "name": "Swaraj Pasilkar",
+    "username": "SRP",
+    "password": "Swaraj123",
+    "isLogedIn": false,
+    "Email": "",
+    "PFP": "https://i.pinimg.com/736x/66/e9/3f/66e93fcceb7947d2812af638028a84bc.jpg",
+    "PhoneNumber": "+91 swaraj",
+    "Enrolled_courses": []
+  },
+  {
+    "id": 4,
+    "name": "Archi Patil",
+    "username": "ArchiPatil",
+    "password": "Archi123",
+    "isLogedIn": false,
+    "Email": "",
+    "PFP": "https://th.bing.com/th/id/OIP.jvMM3Z5E1QAYvE062whXFwHaEo?rs=1&pid=ImgDetMain",
+    "PhoneNumber": "+91 Archi",
+    "Enrolled_courses": []
+  },
+  {
+    "id": 5,
+    "name": "John Doe",
+    "username": "Iamdoe",
+    "password": "password123",
+    "isLogedIn": false,
+    "Email": "",
+    "PFP": "https://th.bing.com/th/id/OIP.KHlvZ7HHrmaHkrF5_nYzYwHaJ4?w=138&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    "PhoneNumber": "+91 JOHN",
+    "Enrolled_courses": []
+  },
+  {
+    "id": 6,
+    "name": "vedant  sarvankar",
+    "username": "vedant",
+    "password": "123456",
+    "isLogedIn": false,
+    "Email": "",
+    "PFP": "",
+    "Enrolled_courses": []
+  }
+]

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Learning Resources</title>
+    <link rel="stylesheet" href="javaStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="main-section">
+      <div class="container mt-5">
+        <h1 class="text-center">
+          Learn Java <span class="highlight">Interactively</span>
+        </h1>
+        <p class="text-center intro-text">
+          Explore video lectures, handwritten notes, and a roadmap to master
+          Java. Click on the tabs below to navigate through the resources.
+        </p>
+
+        <!-- Tabs Section -->
+        <ul class="nav nav-tabs custom-tabs" id="contentTabs" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="videos-tab"
+              data-toggle="tab"
+              href="#videos"
+              role="tab"
+              aria-controls="videos"
+              aria-selected="true"
+              >Video Lectures</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="notes-tab"
+              data-toggle="tab"
+              href="#notes"
+              role="tab"
+              aria-controls="notes"
+              aria-selected="false"
+              >Handwritten Notes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="roadmap-tab"
+              data-toggle="tab"
+              href="#roadmap"
+              role="tab"
+              aria-controls="roadmap"
+              aria-selected="false"
+              >Roadmap</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content mt-4" id="contentTabContent">
+          <!-- Video Lectures Section -->
+          <div
+            class="tab-pane fade show active"
+            id="videos"
+            role="tabpanel"
+            aria-labelledby="videos-tab"
+          >
+            <div class="accordion custom-accordion" id="videoAccordion">
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      Introduction to Java
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="collapse"
+                  aria-labelledby="headingOne"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/yRpLlJmRo2w?si=mFABVewzyZ1k2C34"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Variables in Java
+                    </button>
+                  </h2>
+                </div>
+                <!-- This section will also start collapsed -->
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/LusTv0RlnSU?si=-7IpLCZ04yg-NXkX"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Conditional Statements
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/I5srDu75h_M?si=_uhTGG942cvLWzvO"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingFour">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Loops in Java
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseFour"
+                  class="collapse"
+                  aria-labelledby="headingFour"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/0r1SfRoLuzU?si=wMnA6PMdBtQ-WhET"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingFive">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      Patterns in Java
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseFive"
+                  class="collapse"
+                  aria-labelledby="headingFive"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/GjHNGM7KN3w?si=jlOM6NGwYSfgdLzW"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingSix">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseSix"
+                      aria-expanded="false"
+                      aria-controls="collapseSix"
+                    >
+                      Advanced Patterns in Java
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseSix"
+                  class="collapse"
+                  aria-labelledby="headingSix"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/Dr4PpNa7AYo?si=7d8CgfCRQcYssNG5"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingSeven">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseSeven"
+                      aria-expanded="false"
+                      aria-controls="collapseSeven"
+                    >
+                      Functions and Methods
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseSeven"
+                  class="collapse"
+                  aria-labelledby="headingSeven"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/qcSz4ef9UHA?si=fAQI5xP8jLOLEY4f"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingEight">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseEight"
+                      aria-expanded="false"
+                      aria-controls="collapseEight"
+                    >
+                      Functions in Java
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseEight"
+                  class="collapse"
+                  aria-labelledby="headingEight"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/pFPZ83mgH00?si=_2DMgpWyqjUQaxhH"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingNine">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseNine"
+                      aria-expanded="false"
+                      aria-controls="collapseNine"
+                    >
+                      Array Introduction
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseNine"
+                  class="collapse"
+                  aria-labelledby="headingNine"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/NTHVTY6w2Co?si=qVc6zUeSO2WCG5dM"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingTen">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTen"
+                      aria-expanded="false"
+                      aria-controls="collapseTen"
+                    >
+                      2D Array
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseTen"
+                  class="collapse"
+                  aria-labelledby="headingTen"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/18Zt5I4S45o?si=N8iS6YxRtCUQl94D"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingEleven">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseEleven"
+                      aria-expanded="false"
+                      aria-controls="collapseEleven"
+                    >
+                      Strings
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseEleven"
+                  class="collapse"
+                  aria-labelledby="headingEleven"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/vCRD36bG8xQ?si=sJ6LhVwsU-TIubgT"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingTwelve">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwelve"
+                      aria-expanded="false"
+                      aria-controls="collapseTwelve"
+                    >
+                      Operations and Binary Number system
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseTwelve"
+                  class="collapse"
+                  aria-labelledby="headingTwelve"
+                  data-parent="#videoAccordion"
+                >
+                  <div class="card-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src="https://www.youtube.com/embed/Oud4alVQU4s?si=X8_DQJRWLU06FZAT"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Handwritten Notes Section -->
+          <div
+            class="tab-pane fade"
+            id="notes"
+            role="tabpanel"
+            aria-labelledby="notes-tab"
+          >
+            <div class="accordion custom-accordion" id="notesAccordion">
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseNOne"
+                      aria-expanded="false"
+                      aria-controls="collapseNOne"
+                    >
+                      All in one Downloadable Notes
+                    </button>
+                  </h2>
+                </div>
+                <!-- Collapsed by default -->
+                <div
+                  id="collapseNOne"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#notesAccordion"
+                >
+                  <div class="card-body">
+                    <!-- Embed the PDF directly inside the accordion -->
+                    <iframe
+                      src="assets/java-basic-syntax.pdf"
+                      width="100%"
+                      height="700px"
+                      style="border: none"
+                      title="Basic Syntax PDF"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Roadmap Section -->
+          <div
+            class="tab-pane fade"
+            id="roadmap"
+            role="tabpanel"
+            aria-labelledby="roadmap-tab"
+          >
+            <div class="accordion custom-accordion" id="roadmapAccordion">
+              <div class="card shadow-sm">
+                <div class="card-header" id="headingROne">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseROne"
+                      aria-expanded="false"
+                      aria-controls="collapseROne"
+                    >
+                      Java Learning Roadmap
+                    </button>
+                  </h2>
+                </div>
+                <!-- Collapsed by default -->
+                <div
+                  id="collapseROne"
+                  class="collapse"
+                  aria-labelledby="headingROne"
+                  data-parent="#roadmapAccordion"
+                >
+                  <div class="card-body">
+                    <img
+                      src="assets/java-roadmap.png"
+                      alt="Java Learning Roadmap"
+                      width="100%"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

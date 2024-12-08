@@ -1,0 +1,123 @@
+/* General body styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Main section styling */
+.main-section {
+  background: linear-gradient(to right, #f3f4f5, #eef2f3);
+  padding: 50px 0;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  color: #28a745;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #ff5722;
+}
+
+/* Intro text */
+.intro-text {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* Tabs Customization */
+.custom-tabs .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #28a745;
+  transition: all 0.3s ease;
+}
+
+.custom-tabs .nav-link:hover {
+  color: #218838;
+  background-color: #e9ecef;
+}
+
+.custom-tabs .nav-link.active {
+  color: white;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+/* Accordion Card Styling */
+.custom-accordion .card {
+  margin-bottom: 1rem;
+}
+
+.custom-accordion .card-header {
+  background-color: #28a745;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.custom-accordion .card-header:hover {
+  background-color: #218838;
+}
+
+.custom-accordion .btn-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.custom-accordion .btn-link:hover {
+  text-decoration: overline;
+}
+
+/* Card Shadow */
+.card {
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Accordion Content */
+.card-body {
+  background-color: #f9f9f9;
+}
+
+/* Improve spacing around accordion content */
+iframe,
+img {
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* Custom Link Styles */
+a {
+  color: #ff5722;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #e64a19;
+}
+
+/* ---------------------- */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#28a745, #218838);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#218838, #1e7e34);
+}

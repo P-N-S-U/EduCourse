@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="Loginstyle.css" />
+    <title>Authentication / Registration</title>
+  </head>
+  <body>
+    <!-- Updated Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">EduCourses</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="landing-page.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="landing-page.html#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary" id="loginBtn" onclick="login()">
+              Login
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="btn btn-secondary"
+              id="registerBtn"
+              onclick="register()"
+            >
+              Sign Up
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!----------------------------- Form box ----------------------------------->
+    <div class="wrapper">
+      <!-- Rest of your form and content -->
+      <div class="form-box">
+        <!-- Login Form -->
+        <div class="login-container" id="login">
+          <div class="top">
+            <span
+              >Don't have an account?
+              <a href="#" onclick="register()">Sign Up</a></span
+            >
+            <header>Login</header>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              class="input-field"
+              id="Lusername"
+              placeholder="Username or Email"
+            />
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              class="input-field"
+              id="Lpassword"
+              placeholder="Password"
+            />
+            <i class="bx bx-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="submit"
+              class="submit"
+              value="Sign In"
+              onclick="validateLogin()"
+            />
+          </div>
+        </div>
+
+        <!-- SIGN UP Form -->
+        <div class="register-container" id="register">
+          <div class="top">
+            <span
+              >Have an account? <a href="#" onclick="login()">Login</a></span
+            >
+            <header>Sign Up</header>
+          </div>
+          <div class="two-forms">
+            <div class="input-box">
+              <input
+                type="text"
+                id="firstName"
+                class="input-field"
+                placeholder="Firstname"
+              />
+              <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+              <input
+                type="text"
+                id="lastName"
+                class="input-field"
+                placeholder="Lastname"
+              />
+              <i class="bx bx-user"></i>
+            </div>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              id="username"
+              class="input-field"
+              placeholder="Username"
+            />
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              id="email"
+              class="input-field"
+              placeholder="Email"
+            />
+            <i class="bx bx-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              id="password"
+              class="input-field"
+              placeholder="Password"
+            />
+            <i class="bx bx-lock-alt"></i>
+          </div>
+
+          <div class="input-box">
+            <input
+              type="submit"
+              class="submit"
+              value="Register"
+              onclick="Registration()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXlBpcpK1RV6ha7Vtj8chJ7L2eBzO4dfwm/cy3L1jue0na3MGG6J/jFPKTf2"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOUoi6Wv7KzoMSz2Dh1z3nF6AM9Vr5PxT8nbTov4p/6ff"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function validateLogin() {
+        const username = document.getElementById("Lusername").value;
+        const password = document.getElementById("Lpassword").value;
+
+        fetch("/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        })
+          .then((response) => {
+            if (response.ok) {
+              return response.json();
+            } else {
+              return response.json().then((data) => {
+                throw new Error(data.message); // Get message from response
+              });
+            }
+          })
+          .then((data) => {
+            if (data.redirect) {
+              window.location.href = data.redirect; // Redirect on successful login
+            }
+          })
+          .catch((error) => {
+            alert(
+              error.message || "Invalid username or password. Please try again."
+            ); // Show error message from response
+            console.error("Error:", error);
+          });
+      }
+
+      // Function to handle registration
+      function Registration() {
+        const name =
+          document.getElementById("firstName").value +
+          " " +
+          document.getElementById("lastName").value;
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const email = document.getElementById("email").value;
+
+        fetch("/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, username, password, email }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              alert("Registration successful!");
+              login(); // Switch to login form on successful registration
+            } else {
+              alert(data.message || "Registration failed. Try again.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      var a = document.getElementById("loginBtn");
+      var b = document.getElementById("registerBtn");
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+
+      function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+      }
+
+      function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+      }
+    </script>
+  </body>
+</html>

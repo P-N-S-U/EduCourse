@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        padding-top: 56px; /* Adjust for fixed navbar height */
+      }
+
+      .user-profile {
+        margin-top: 30px;
+      }
+
+      .card-img-top {
+        height: 150px; /* Adjust height as needed */
+        width: 150px; /* Adjust width to make it a circle */
+        object-fit: cover; /* Maintain aspect ratio */
+      }
+
+      footer {
+        background-color: #f8f9fa;
+        padding: 20px 0;
+      }
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(#0056b3, #003a70);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(#003a70, #00244d);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">EduCourses</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="landing-page.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="landing-page.html#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="explore.html">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="logoutBtn">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="user-profile container mt-5">
+      <h2 class="text-center mb-4">User Profile</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div>
+              <img
+                src=""
+                class="card-img-top rounded-circle"
+                alt="Profile Picture"
+                class="img-fluid"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title Displayname">Priyanshu</h5>
+              <p class="card-text">Software Developer</p>
+              <a href="#" class="btn btn-primary">Edit Profile</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Personal Information</h5>
+              <hr />
+              <p>
+                <strong>Email:</strong>
+                <span id="user-email">priyanshu@gmail.com</span>
+              </p>
+              <p>
+                <strong>Phone:</strong>
+                <span id="user-phone">+91 something</span>
+              </p>
+              <p>
+                <strong>Joined:</strong>
+                <span id="user-joined">June 2024</span>
+              </p>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Enrolled Courses</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Web Development</li>
+                <li class="list-group-item">Data Science</li>
+                <li class="list-group-item">Digital Marketing</li>
+              </ul>
+              <a href="#courses" class="btn btn-secondary mt-2"
+                >View All Courses</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center mt-4">
+      <p>&copy; 2024 EduCourses. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("/isLogedIn")
+      .then((response) => response.json())
+      .then((user) => {
+        const Displayname = document.querySelector(".card-title.Displayname");
+        const email = document.getElementById("user-email");
+        const phone = document.getElementById("user-phone");
+        const profilePic = document.querySelector(".card-img-top");
+
+        Displayname.textContent = user.name;
+        email.textContent = user.Email || "Email not Available";
+        phone.textContent = user.PhoneNumber || "Phone-Number not Available";
+
+        if (user) {
+          if (user.PFP) {
+            profilePic.src = user.PFP;
+          } else {
+            profilePic.src = "/assets/default.jpg"; // fallback if no profile picture exists
+          }
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching user login status:", error);
+      });
+  });
+
+  document
+    .getElementById("logoutBtn")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+
+      fetch("/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error("Logout failed");
+          }
+        })
+        .then((data) => {
+          // Redirect to the homepage or wherever necessary
+          window.location.href = data.redirect;
+        })
+        .catch((error) => {
+          console.error("Error during logout:", error);
+        });
+    });
+</script>

@@ -1,0 +1,104 @@
+/* Navbar Styles */
+.navbar {
+  margin-bottom: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Section Styles */
+.hero {
+  background-image: url("./assets/bgimg.png");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero h1 {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.hero a {
+  margin-top: 12rem !important;
+}
+
+.card-img-top {
+  height: 12.5rem;
+  object-fit: cover;
+  padding: 1rem;
+  border-bottom: 1px solid darkgrey;
+}
+
+/* Courses Section Styles */
+.courses {
+  padding: 50px 0;
+}
+
+.course-card {
+  margin-bottom: 30px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* About Us Section Styles */
+.about-us {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+}
+footer a {
+  color: #ffc107;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.enroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup {
+  color: #f8f9fa;
+}
+
+.nav-link {
+  width: 6rem;
+  font-family: sans-serif;
+}
+
+/* ----------------------- */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0056b3, #003a70);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#003a70, #00244d);
+}
