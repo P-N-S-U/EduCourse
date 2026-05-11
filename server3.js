@@ -8,7 +8,6 @@ const { Logout } = require("./SRC/Logout");
 const app = express();
 const PORT = 8000;
 
-app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
 app.get("/", (req, res) => {
